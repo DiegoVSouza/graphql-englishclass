@@ -4,16 +4,20 @@ const userSchema= gql`
 
 type Query{
     users: [User]
-    primeiroUser: User
+    user(id: ID!): User! 
 }
 
 type User {
     nome: String!
     ativo: Boolean!
     email: String
+    role: Role!
 }
 
-
+type Role{
+    id: ID!
+    type: String!
+}
 `
 
 module.exports = userSchema

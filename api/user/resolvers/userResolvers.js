@@ -1,14 +1,7 @@
-const arrayUsers =[
-    {
-        nome:'teste',
-        ativo: true
-    }
-]
-
 const userResolvers = {
     Query:{
-        users: ()=> arrayUsers,
-        primeiroUser: () => arrayUsers[0]
+        users: (root, args, {dataSources})=> dataSources.usersAPI.getUsers(),
+        user: (root, {id}, {dataSources})=> dataSources.usersAPI.getUserById(id)
     }
 }
 
