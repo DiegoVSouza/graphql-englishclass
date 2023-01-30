@@ -41,6 +41,14 @@
       "ativo": true,
       "email": "m@m.com",
       "role": 2
+    },
+    {
+      "nome": "teste",
+      "ativo": true,
+      "email": "email@gmail.com",
+      "role": 1,
+      "createdAt": "2023-01-30T00:00:00.000Z",
+      "id": 7
     }
   ],
   "roles": [
